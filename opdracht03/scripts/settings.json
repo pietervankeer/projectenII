@@ -1,0 +1,47 @@
+{
+    "Servers": [
+        {
+            "Hostname": "Groep02DC",
+            "Network": [
+                {
+                    "Name": "WAN",
+                    "DHCP": "True",
+                    "IPAdress": ""
+                },
+                {
+                    "Name": "LAN",
+                    "DHCP": "False",
+                    "IPAdress": "192.168.1.1"
+                }
+            ]
+        },
+        {
+            "Hostname": "Groep02Aut",
+            "Network": [
+                {
+                    "Name": "LAN",
+                    "DHCP": "False",
+                    "IPAdress": "192.168.1.2"
+                }
+            ]
+        }
+    ],
+
+    // vanaf hier hoort het niet bij het initial-setup script.
+    "ADDS": {
+        "DomainName": "CoronaPrj.local",
+        "DomainNetBiosName": "CORONA"
+    },
+    "DHCP": {
+        "ScopeName": "CPScope",
+        "ScopeDescr": "De scope voor het toewijzen van ip-adressen in het netwerk.",
+        "ScopeStartIp": "192.168.1.60",
+        "ScopeEndIp": "192.168.1.100",
+        "ScopeSubMask": "255.255.255.0",
+        "ScopeLease": "8.00:00:00"
+    },
+    "DNS": {
+        "NetworkID": "192.168.1.0/24",
+        "repScope": "Forest"
+    }
+}
